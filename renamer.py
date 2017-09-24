@@ -16,7 +16,7 @@ if __name__ == '__main__':
     for file in files:
         if args.before in file:
             before = os.path.join(path, file)
-            after = os.path.join(path, file.replace(args.before, args.after))
+            after = os.path.join(path, file.replace(args.before, args.after).strip())
             os.rename(before, after)
             print(before + " => " + after)
             
